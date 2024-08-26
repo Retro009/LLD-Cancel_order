@@ -50,6 +50,7 @@ public class OrderServiceImpl implements OrderService{
                 if(inventory==null)
                     throw new OrderNotFoundException("Inventory Not available for given Product");
                 inventory.setQuantity(inventory.getQuantity()+quantity);
+                inventoryRepository.save(inventory);
             }
         }
         order.setOrderStatus(OrderStatus.CANCELLED);

@@ -8,6 +8,7 @@ import java.util.List;
 
 @Data
 @Entity
+@Table(name = "orders")
 @EqualsAndHashCode
 public class Order extends BaseModel{
     @ManyToOne
